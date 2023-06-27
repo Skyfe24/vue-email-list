@@ -13,7 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- AXIOS -->
-        https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
 
     <!-- VUE -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -32,19 +34,35 @@
                 Attraverso l'apposita API di Boolean :
                 https://flynn.boolean.careers/exercises/api/random/mail
                 generare 10 indirizzi email e stamparli in pagina all'interno di una lista.</span></h3>
-            <button @click="welcome" class="border-round next pe-3" >
+            <!--<button @click="welcome" class="border-round next pe-3" >
                 <i class="fas fa-angle-down"> Gioca e divertiti con Vue</i>
             </button>
             <button @click="lol" class="border-round next pe-3" >
                 <i class="fas fa-angle-down"> Gioca e divertiti con Vue ancora di piu' </i>
-            </button>
+              </button>-->
         </div>
 
 
     </header>
     <div class="container mt-4 mb-4">
-        <div id="grid"><input :placeholder="traccia" type="text" v-model="NomeeCognome"> </div>
-        <input placeholder="grazie,grazie" type="text">
+        
+
+
+        <div id="grid">
+            <div>Indirizzi email:  <ul>
+                <li> {{ emails1 }}  </li><li>{{ emails2 }} </li><li>{{ emails3 }}</li>
+                <li>{{ emails4 }}</li><li>{{ emails5 }}</li><li>{{ emails6 }}</li>
+                <li>{{ emails7 }}</li><li>{{ emails8 }}</li><li>{{ emails9 }}</li><li>{{ emails10 }}</li>
+            
+            
+            
+            
+            
+            </ul>                                                   </div>
+            
+            
+             </div>
+       
     </div>
     <input placeholder="traccia" type="text"> </div>
     <!-- <div class="box">1</div>

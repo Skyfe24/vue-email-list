@@ -10,7 +10,7 @@ const { createApp } = Vue;
 const app = createApp({
   data() {
     return {
-      letterainiziale: 'In attesa video lezione . . .',
+      letterainiziale: 'Lezione su AXIOS',
       Imgsample: "img/christopher.jpg",
       traccia: 'inserisci il nome',
       colorClass: 'text-danger',
@@ -19,18 +19,11 @@ const app = createApp({
   },
   methods: {
     welcome() {
-      alert(`Una mela cade dall’albero. Altre due rimaste sui rami, scoppiano a ridere. Allora quella caduta, esclama in modo severo: "Cosa c’è da ridere? Siete proprio immature"”.
-      
-      “La vorrei da boscaiolo”.
-      
-      “Che taglia?”.
-      
-      “Alberi”.`)
+      alert(`testo`)
     },
 
     lol() {
-      alert(`Un genovese torna a casa presto dal lavoro. Nel giardino di casa vede parcheggiato il furgoncino di un idraulico. 
-      Alzando lo sguardo al cielo esclama: “Ti prego, Signore, fa che sia il suo amante…””.`)
+      alert(`testo`)
     },
 
 
@@ -56,15 +49,66 @@ app.mount('#prova');
 const app2 = createApp({
   data() {
     return {
-      letterainiziale: 'QUI il Testo da stampare con Vue, a destra il bonus: carica immagine con Vue',
-      Imgsample: "img/christopher.jpg",
-      traccia: 'inserisci il nome',
-      colorClass: 'text-danger'
+      emails1: '',
+      emails2: '',
+      emails3: '',
+      emails4: '',
+      emails5: '',
+      emails6: '',
+      emails7: '',
+      emails8: '',
+      emails9: '',
+      emails10: '',
+      
     }
   },
   methods: {
     
-  }
+  },
+created() {
+  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then(res => {
+  this.emails1 = res.data.response;
+  })
+  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then(res => {
+  this.emails2 = res.data.response;
+  })
+  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then(res => {
+  this.emails3 = res.data.response;
+  })
+  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then(res => {
+  this.emails4 = res.data.response;
+  })
+  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then(res => {
+  this.emails5 = res.data.response;
+  })
+  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then(res => {
+  this.emails6 = res.data.response;
+  })
+  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then(res => {
+  this.emails7 = res.data.response;
+  })
+  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then(res => {
+  this.emails8 = res.data.response;
+  })
+  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then(res => {
+  this.emails9 = res.data.response;
+  })
+  axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then(res => {
+  this.emails10 = res.data.response;
+  })
+}
+
+  
 })
 // La monto nel mio id chiamato 'prova'
 app2.mount('#grid');
